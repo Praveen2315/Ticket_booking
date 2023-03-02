@@ -1,0 +1,42 @@
+<nav class="navbar">
+<div class="container">
+    <h1 class="booking_name">BOOKING</h1>
+    <%= form_with(model: @booking, class: "row g-3 needs-validation", local: true) do |form| %>
+    <div class="col-md-4">
+        <%= form.label :name, class: "form-label" %>
+        <%= form.text_field :name, class:"form-control",placeholder: "enter name"%>
+        <div class="valid-feedback">
+     </div>
+  </div>
+  <div class="col-md-4">
+        <%= form.label :movie_name, class: "form-label" %><br>
+        <%= form.text_field :movie_name,class:"form-control", placeholder:"Enter movie_name" %>
+    <div class="valid-feedback">
+    </div>
+  </div>
+  <div class="col-md-4">
+   <%= form.label :phone,class: "form-label" %><br>
+    <div class="input-group has-validation">
+       <%= form.text_field :phone, class:"form-control",placeholder:"phone_No" %>
+      <div class="invalid-feedback">
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+     <%= form.label :no_of_tickets,class:"form-label" %><br>
+     <div class="input-group has-validation">
+         <%= form.number_field :no_of_tickets,class: "form-control",placeholder:"No_of_ticket" %>  
+      <div class="invalid-feedback">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="col-8">
+     <button>
+       <%= form.submit %>
+      </button>
+    </div>
+  </div>
+  <% end %>
+</div>
+</nav>

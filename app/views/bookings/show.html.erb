@@ -1,0 +1,14 @@
+<div class="container ">
+<h1 class="show_text">BOOKING Detials</h1>
+  <div class="card text-center" style="width: 25rem;">
+    <div class="card-body">
+        <h5 class="card-title"><%= @booking.name %></h5>
+        <h6 class="card-subtitle mb-2 text-muted">Enjoy the movie</h6>
+        <h5 class="card-title"><strong>movie_name: </strong><%= @booking.movie_name %></h5>
+        <h5 class="card-title"><strong>phone: </strong><%= @booking.phone %></h5>
+        <h5 class="card-title"><strong>no_of_tickets: </strong><%= @booking.no_of_tickets %></h5>
+        <a href="#" class="card-link"><%= link_to 'Edit', edit_booking_path(@booking) %></a> |  |
+        <a href="#" class="card-link"><%= link_to 'Cancel', booking_path(@booking), method: :delete, data: { confirm: "Are you sure?" } %></a>
+    </div>
+  </div>
+</div>
